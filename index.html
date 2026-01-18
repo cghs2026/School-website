@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC Public School</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+    }
+    header {
+      background: #1e88e5;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      background: #1565c0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 12px 18px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background: #0d47a1;
+    }
+    section {
+      display: none;
+      padding: 20px;
+      margin: 15px;
+      background: white;
+      border-radius: 6px;
+    }
+    section.active {
+      display: block;
+    }
+    h2 {
+      color: #1e88e5;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 8px;
+    }
+    th {
+      background: #e3f2fd;
+    }
+    .notice {
+      background: #fff3cd;
+      border-left: 5px solid #ff9800;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .holiday {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    footer {
+      background: #1e88e5;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</head>
+<body onload="showSection('about')">
+
+<header>
+  <h1>ABC Public School</h1>
+  <p>Knowledge • Discipline • Success</p>
+</header>
+
+<nav>
+  <button onclick="showSection('about')">About</button>
+  <button onclick="showSection('classes')">Classes</button>
+  <button onclick="showSection('announcements')">Announcements</button>
+  <button onclick="showSection('holidays')">Holiday Notice</button>
+  <button onclick="showSection('gallery')">Photo Gallery</button>
+</nav>
+
+<section id="about">
+  <h2>About Our School</h2>
+  <p>
+    ABC Public School provides quality education from Class I to X.
+    We focus on academic excellence, discipline, and all-round development of students.
+  </p>
+</section>
+
+<section id="classes">
+  <h2>Class Details (I to X)</h2>
+  <table>
+    <tr><th>Class</th><th>Subjects</th></tr>
+    <tr><td>Class I</td><td>English, Hindi, Maths, EVS</td></tr>
+    <tr><td>Class II</td><td>English, Hindi, Maths, EVS</td></tr>
+    <tr><td>Class III</td><td>English, Hindi, Maths, Science, SST</td></tr>
+    <tr><td>Class IV</td><td>English, Hindi, Maths, Science, SST</td></tr>
+    <tr><td>Class V</td><td>English, Hindi, Maths, Science, SST</td></tr>
+    <tr><td>Class VI</td><td>English, Hindi, Maths, Science, SST</td></tr>
+    <tr><td>Class VII</td><td>English, Hindi, Maths, Science, SST</td></tr>
+    <tr><td>Class VIII</td><td>English, Hindi, Maths, Science, SST</td></tr>
+    <tr><td>Class IX</td><td>English, Hindi, Maths, Science, SST</td></tr>
+    <tr><td>Class X</td><td>English, Hindi, Maths, Science, SST</td></tr>
+  </table>
+</section>
+
+<section id="announcements">
+  <h2>Announcements</h2>
+  <div class="notice">📢 Unit Test starts from 10th August</div>
+  <div class="notice">📢 Parent-Teacher Meeting on 5th August</div>
+</section>
+
+<section id="holidays">
+  <h2>Holiday Notice</h2>
+  <div class="holiday">🌴 Independence Day – 15th August</div>
+  <div class="holiday">🌴 Durga Puja – 10th to 14th October</div>
+</section>
+
+<section id="gallery">
+  <h2>Photo Gallery</h2>
+  <div class="gallery">
+    <img src="https://via.placeholder.com/300x200?text=School">
+    <img src="https://via.placeholder.com/300x200?text=Classroom">
+    <img src="https://via.placeholder.com/300x200?text=Sports">
+    <img src="https://via.placeholder.com/300x200?text=Function">
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 ABC Public School</p>
+</footer>
+
+</body>
+</html>
